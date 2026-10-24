@@ -1,0 +1,6 @@
+# Development draft. Do not change until the launch checklist is approved.
+# robots.txt is not access control. Use private hosting for confidential reviews.
+User-agent: *
+Disallow: /
+# After approval: Allow: / and Disallow: /docs/
+# Add Sitemap: https://YOUR-CONFIRMED-HOST/sitemap.xml

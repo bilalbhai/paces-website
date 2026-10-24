@@ -1,0 +1,14 @@
+# Keep text consistent when edited on Windows or viewed on GitHub.
+* text=auto eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.xml text eol=lf
+*.svg text eol=lf
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.webp binary
+*.ico binary

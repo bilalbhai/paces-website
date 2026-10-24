@@ -1,0 +1,29 @@
+# Generated download packages (the source files are tracked instead).
+/*.zip
+
+# Local audit archive of the original website, including its old scripts.
+/paces-website/docs/source/
+
+# Private settings and credentials. Public js/config.js stays tracked.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+.aws/
+.codex/
+.agents/
+
+# Operating-system and editor files.
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+*.tmp
+*.temp
+*~
