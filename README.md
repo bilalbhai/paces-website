@@ -68,7 +68,7 @@ Public repositories can use GitHub Pages on GitHub Free. Private-repository Page
 
 - WhatsApp needs a confirmed, authorised number.
 - Online enquiry delivery needs a configured external form endpoint and a tested business inbox.
-- Staff photos are clearly labelled placeholders until approved portraits are added.
+- Bilal Zafar uses the supplied staff photo. Issa, Farah and Sujata use clearly labelled illustrated placeholders until their real portraits are supplied.
 - Privacy, accessibility, image permissions and other launch items need review.
 - Search indexing remains in development mode until the production URL and launch settings are confirmed.
 

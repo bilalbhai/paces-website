@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="700" viewBox="0 0 600 700" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrative placeholder portrait of an adult man</title>
+  <desc id="desc">An original flat vector illustration in P.A.C.E.S. colours. This is a placeholder, not a photograph or likeness of a staff member.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#faf7f0"/>
+      <stop offset="1" stop-color="#e4eee2"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="0" y1="0" x2="0.8" y2="1">
+      <stop stop-color="#36584b"/>
+      <stop offset="1" stop-color="#243e36"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#background)" d="M0 0h600v700H0z"/>
+  <circle cx="302" cy="290" r="216" fill="#c7dfcc"/>
+  <circle cx="66" cy="81" r="104" fill="#fff0dc"/>
+  <path d="M537 0h63v174c-54-22-86-91-63-174Z" fill="#f6931d" opacity=".72"/>
+  <path d="M0 582c65-53 114-34 146 36 15 32 18 60 17 82H0Z" fill="#9accae"/>
+  <circle cx="492" cy="520" r="13" fill="#f6931d"/>
+  <path d="M130 700V543c0-82 71-137 170-137s170 55 170 137v157Z" fill="url(#shirt)"/>
+  <path d="m211 425 36-21h107l38 21-91 123Z" fill="#faf7f0"/>
+  <path d="M256 344h88v77c0 23-20 39-44 39s-44-16-44-39Z" fill="#c58e6c"/>
+  <path d="M256 349c24 21 62 24 88 0v34c-25 21-63 18-88 0Z" fill="#b77d5b" opacity=".55"/>
+  <path d="M202 245c-19-9-30 4-27 24 3 20 15 32 31 29l-4-53Zm196 0c19-9 30 4 27 24-3 20-15 32-31 29l4-53Z" fill="#cf9c79"/>
+  <path d="M197 209c0-72 43-111 103-111s103 39 103 111v57c0 66-42 110-103 110s-103-44-103-110Z" fill="#d7a886"/>
+  <path d="M195 244c-7-21-12-44-9-70 3-44 29-87 79-96 25-20 73-12 99 4 39 24 55 67 47 114-3 19-8 35-11 49l-15-64c-45 4-89-6-122-27-8 29-26 45-53 50l-4 40Z" fill="#303a32"/>
+  <path d="M212 156c27-32 80-43 125-23" fill="none" stroke="#455348" stroke-width="10" stroke-linecap="round"/>
+  <path d="M230 234c12-6 25-6 36-1m68 0c11-5 24-5 36 1" fill="none" stroke="#6c4d3b" stroke-width="6" stroke-linecap="round"/>
+  <ellipse cx="250" cy="257" rx="6" ry="7" fill="#354138"/>
+  <ellipse cx="350" cy="257" rx="6" ry="7" fill="#354138"/>
+  <path d="m300 264-7 34h16" fill="none" stroke="#bb8565" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M272 325c17 12 39 12 56 0" fill="none" stroke="#8d5845" stroke-width="5" stroke-linecap="round"/>
+  <path d="M166 558v142m268-142v142" stroke="#496d5b" stroke-width="4" stroke-linecap="round" opacity=".6"/>
+  <path d="M253 455 300 498l48-43" fill="none" stroke="#e8e3d7" stroke-width="5" stroke-linecap="round"/>
+</svg>

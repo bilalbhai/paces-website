@@ -12,9 +12,9 @@ A complete, editable website for Prosper and Care Endeavour Services, built with
 
 No installation or development server is required. The pages, styles, local images, navigation, FAQs, directory and profiles use relative paths and classic scripts compatible with `file://`. Internet access is needed for online fonts, external links and any future form delivery. System fonts work offline.
 
-Open `team.html` to see the four staff profiles supplied by the business: **Issa Tamerji — Enrolled Nurse and Director; Farah — Registered Nurse; Sujata — Registered Nurse; Bilal — Enrolled Nurse**. No special preview URL is required. The homepage carousel, directory, individual profile links and worker-preselected enquiries use these records.
+Open `team.html` to see the four staff profiles supplied by the business: **Issa Tamerji — Enrolled Nurse and Director; Farah — Registered Nurse; Sujata — Registered Nurse; Bilal Zafar — Enrolled Nurse**. No special preview URL is required. The homepage carousel, directory, individual profile links and worker-preselected enquiries use these records.
 
-Photographs have not been supplied. Each profile uses an abstract illustration explicitly labelled as a photo placeholder, rather than a staff portrait. Only the supplied names and roles are presented; no additional qualifications, experience or service assignments have been invented. The `approved` publication status means authorised for this website, not independently credential-verified. See `docs/STAFF_PROFILE_UPDATE.md`.
+Bilal Zafar’s photograph was supplied for the website and is saved unchanged as `images/workers/bilal-zafar.jpg`. Issa, Farah and Sujata use original illustrated portraits labelled **Illustrative placeholder**, not actual staff likenesses. Farah’s placeholder includes a hijab as requested. Each profile has different, business-requested first-person introduction copy about support values; no extra qualifications, years of experience, clinical duties, service assignments or availability have been added. The `approved` publication status means authorised for this website, not independently credential-verified. See `docs/STAFF_PROFILE_UPDATE.md`.
 
 ## Current activation status
 
@@ -23,7 +23,7 @@ Photographs have not been supplied. Each profile uses an abstract illustration e
 | Telephone | `0401 339 966`, corroborated on the existing website. Links use `tel:+61401339966`. Reconfirm before public launch. |
 | WhatsApp | **Not confirmed.** Buttons lead to a clear setup notice on the contact page. No WhatsApp conversation is opened until a number is confirmed. |
 | Enquiry/referral delivery | **Inactive.** Form validation works, but nothing is sent without an authorised endpoint. |
-| Four staff profiles | Names and roles supplied and authorised by the business on 25 October 2026. Profiles are visible normally; photo placeholders remain until approved portraits are supplied. Additional biography details are optional and not invented. |
+| Four staff profiles | Names/roles supplied by the business; Bilal’s name updated to Bilal Zafar. One supplied photo and three labelled illustrated placeholders, plus distinct values-focused introductions, were requested on 25 October 2026. Professional credentials have not been independently verified. |
 | Policies | Privacy and accessibility notices are explicitly marked drafts for review. No full legal or WCAG compliance claim is made. |
 | Registration | The original website publishes `4-JCYQ7LA`. It is preserved in the audit; current registration and badge rights need verification before making an accreditation claim. |
 | Search indexing | Development `noindex` metadata and `robots.txt` exclusion are enabled. The sitemap is staged for the existing domain and must be updated for the final host. |
@@ -39,7 +39,7 @@ Photographs have not been supplied. Each profile uses an abstract illustration e
 | `js/services.js` | Editable service summaries used by configuration/form matching |
 | `js/workers.js` | Editable worker records and approval status |
 | `js/main.js` | Navigation, contact links, forms, metadata, directory and carousel |
-| `images/` | Local original business assets and clearly labelled staff-photo placeholder illustrations |
+| `images/` | Original business assets, Bilal Zafar’s supplied photo and three labelled staff portrait illustrations |
 | `docs/` | Audit, complete source archive, migration map, design system, checks and approvals |
 
 Open these in a text editor such as Notepad. Save with the original extension and UTF-8 encoding, then refresh the browser. Keep a backup before editing. If a browser still shows an older version, use Ctrl+F5.
@@ -84,7 +84,7 @@ The form does not store enquiry drafts in browser storage. Refreshing or leaving
 
 ## Add an approved support worker
 
-The four current records contain the names and roles supplied and authorised by the business on 25 October 2026. Their stable IDs are `issa-tamerji`, `farah`, `sujata` and `bilal`. Edit these records to add further supplied details, or add a new record for another genuine team member. Do not invent missing information. `publicationStatus: 'approved'` controls website visibility; it does not certify professional credentials.
+The four current records contain the names and roles supplied and authorised by the business on 25 October 2026, including the later correction to Bilal Zafar and the requested values-focused introduction copy. Their stable IDs are `issa-tamerji`, `farah`, `sujata` and `bilal`. Edit these records to add further supplied details, or add a new record for another genuine team member. Do not invent missing information. `publicationStatus: 'approved'` controls website visibility; it does not certify professional credentials.
 
 1. Obtain the staff member’s and business’s approval for each published detail and photograph.
 2. In `js/workers.js`, add a genuine object using the same structure:
@@ -113,7 +113,7 @@ The four current records contain the names and roles supplied and authorised by 
 
 ## Change worker photographs
 
-Save an approved, sensibly compressed JPG/WebP photograph in `images/workers/`. Update that worker’s `photo` path in `js/workers.js` and set `photoIsPlaceholder: false` only after a genuine approved portrait replaces the illustration. Keep `photoIsPlaceholder: true` while an abstract SVG is used; that flag provides truthful alternative text and a visible placeholder label. Update matching static fallback cards in `team.html` and `index.html` too. Do not begin the path with `/`; use `images/workers/name.jpg`. Check the desktop landscape card and mobile top-photo crop. The image is displayed with `object-fit: cover`; adjust `object-position` in CSS if needed. The existing SVGs are abstract illustrations, not staff portraits.
+Save an approved, sensibly compressed JPG/WebP photograph in `images/workers/`. Update that worker’s `photo` path in `js/workers.js` and set `photoIsPlaceholder: false` only after a genuine approved portrait replaces the illustration. Keep `photoIsPlaceholder: true` while an illustrated SVG is used. Set truthful `photoAlt` and `photoPlaceholderLabel: 'Illustrative placeholder'` for that illustration. When replacing it with a real photo, remove or update those placeholder-specific values as well as setting the flag to false. Update matching static fallback cards in `team.html` and `index.html` too. Do not begin the path with `/`; use `images/workers/name.jpg`. Check the desktop landscape card and mobile top-photo crop. The image is displayed with `object-fit: cover`; adjust `object-position` in CSS if needed. The current illustrated SVGs are dummy portraits, not staff likenesses. Bilal’s real photo uses `photoIsPlaceholder: false`; his stable ID remains `bilal` so existing links continue to work.
 
 ## Edit services and other text
 

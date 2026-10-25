@@ -2,6 +2,24 @@
 
 Date: 25 October 2026 (Australia/Sydney).
 
+## Current photo, name and introduction update — 25 October 2026
+
+- The user corrected **Bilal** to **Bilal Zafar** and supplied his photo for the website. It was copied unchanged to `images/workers/bilal-zafar.jpg` (1152 × 2048). His stable profile ID remains `bilal`, preserving existing profile and enquiry links.
+- Issa is represented by an original illustrated male placeholder, Farah by an original illustrated female placeholder wearing a hijab, and Sujata by an original illustrated female placeholder, as requested. These are dummy illustrations, not claims about their actual likenesses or real staff photographs.
+- The three illustrations remain marked `photoIsPlaceholder: true`, with truthful alternative text and the visible label **Illustrative placeholder**. Bilal’s supplied photo has `photoIsPlaceholder: false`.
+- All four profiles now have different first-person introductions requested by the business, centred on listening, respect, kindness, choice and everyday support. This is website copy, not an independently verified staff quotation or evidence of additional qualifications, experience, duties or availability.
+- Homepage/team static fallback cards must stay in sync with `js/workers.js` for names, biography text, images, labels and links.
+
+### Verification of this latest update
+
+- Browser-checked the homepage, team page and all four individual profiles at 320, 375, 390, 430, 768, 1024 and 1440px: 42 page/width checks with no document overflow, failed completed images or collapsed portrait areas.
+- Reviewed the supplied photo and all three illustrations visually. Bilal's photo uses a taller mobile frame to retain his face; its source bytes are unchanged from the supplied JPEG. Only the illustrations carry placeholder labels.
+- Verified all four profile enquiry links select the matching person, including the updated name **Bilal Zafar**, while retaining stable ID `bilal`.
+- Verified carousel Next and keyboard End, and observed no JavaScript warnings/errors during these checks.
+- Static homepage/team cards match the edited data, and local reference/metadata checks passed. Live publication is verified separately after the GitHub push; the historical checks below predate this change.
+
+## Initial profile update — historical record
+
 ## Information supplied and authorised
 
 The business owner requested four profiles in this chat and supplied these names and roles:

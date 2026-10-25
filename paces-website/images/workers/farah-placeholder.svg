@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="700" viewBox="0 0 600 700" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrative placeholder portrait of an adult woman wearing a hijab</title>
+  <desc id="desc">An original flat vector illustration in P.A.C.E.S. colours. This is a placeholder, not a photograph or likeness of a staff member.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#faf7f0"/>
+      <stop offset="1" stop-color="#f4eadb"/>
+    </linearGradient>
+    <linearGradient id="hijab" x1="0.1" y1="0" x2="1" y2="1">
+      <stop stop-color="#b8d9c1"/>
+      <stop offset="1" stop-color="#78a88d"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#background)" d="M0 0h600v700H0z"/>
+  <circle cx="300" cy="293" r="218" fill="#f8dcb6"/>
+  <path d="M0 0h114C99 68 55 104 0 112Z" fill="#9accae"/>
+  <circle cx="546" cy="86" r="93" fill="#e5eee1"/>
+  <path d="M469 700c-3-60 37-122 131-137v137Z" fill="#f6931d" opacity=".65"/>
+  <circle cx="94" cy="489" r="12" fill="#9accae"/>
+  <path d="M121 700V541c0-83 75-137 179-137s179 54 179 137v159Z" fill="#2c4c40"/>
+  <path d="M169 345c-23-68-22-154 12-205 28-43 71-65 119-65 49 0 92 22 120 65 34 51 35 137 12 205l-2 112c-33 38-88 62-130 62-43 0-98-24-131-62Z" fill="url(#hijab)"/>
+  <path d="M221 181c17-31 45-49 79-49s62 18 79 49l11 79c0 66-38 112-90 112s-90-46-90-112Z" fill="#d9ad8b"/>
+  <path d="M198 246c-2-47 6-83 27-111 17-23 44-37 75-37 42 0 75 23 91 58-48-7-87-20-115-38-6 29-31 61-68 81l-10 47Z" fill="#96c4a8"/>
+  <path d="M210 267c1 64 35 109 90 118 47-8 81-47 88-100 15 39 21 78 16 117-30 44-70 75-104 99-48-25-89-61-111-105 0-48 6-91 21-129Z" fill="#9accae"/>
+  <path d="M203 382c26 56 74 96 139 122-36 17-66 21-94 13-24-24-43-49-57-77Z" fill="#7eac91"/>
+  <path d="M375 375c-19 48-53 91-104 128m-58-326c-12 22-16 47-16 74" fill="none" stroke="#709c80" stroke-width="5" stroke-linecap="round" opacity=".65"/>
+  <path d="M238 236c10-6 21-6 31-1m62 0c10-5 21-5 31 1" fill="none" stroke="#71503d" stroke-width="5" stroke-linecap="round"/>
+  <path d="M243 258c5 5 12 5 17 0m80 0c5 5 12 5 17 0" fill="none" stroke="#3c4438" stroke-width="5" stroke-linecap="round"/>
+  <path d="m300 264-6 31h13" fill="none" stroke="#c28b6d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M278 324c14 10 30 10 44 0" fill="none" stroke="#985e4a" stroke-width="5" stroke-linecap="round"/>
+  <path d="M163 553v147m274-147v147" stroke="#456b56" stroke-width="4" stroke-linecap="round" opacity=".65"/>
+</svg>

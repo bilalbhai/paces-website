@@ -86,16 +86,17 @@
     function workerCard(worker, detailed) {
       var article = make("article", detailed ? "worker-card worker-card-full" : "worker-card");
       var media = make("div", "worker-photo");
+      if (worker.id === "bilal") media.classList.add("worker-photo--bilal");
       var photograph = make("img");
       photograph.src = root + worker.photo;
-      photograph.alt = worker.photoIsPlaceholder || worker.publicationStatus === "development"
+      photograph.alt = worker.photoAlt || (worker.photoIsPlaceholder || worker.publicationStatus === "development"
         ? "Photo placeholder for " + worker.name + "; staff photograph to be added"
-        : "Photograph of " + worker.name;
-      photograph.width = 600;
-      photograph.height = 700;
+        : "Photograph of " + worker.name);
+      photograph.width = worker.photoWidth || 600;
+      photograph.height = worker.photoHeight || 700;
       photograph.loading = "lazy";
       media.appendChild(photograph);
-      if (worker.photoIsPlaceholder) media.appendChild(make("p", "worker-photo-note", "Photo to be added"));
+      if (worker.photoIsPlaceholder) media.appendChild(make("p", "worker-photo-note", worker.photoPlaceholderLabel || "Photo to be added"));
       article.appendChild(media);
       var body = make("div", "worker-content");
       if (worker.publicationStatus === "development") {

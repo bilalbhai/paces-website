@@ -11,8 +11,8 @@ Prepared 25 October 2026. The website is a local development deliverable. No per
 | Public telephone | 0401 339 966 corroborated on original site; owner reconfirmation for launch pending |
 | WhatsApp | No confirmed WhatsApp number; integration inactive and setup status explained |
 | Enquiry inbox / form | No authorised inbox or endpoint supplied; delivery is **not active and has not been tested** |
-| Workers | Owner supplied and authorised four names/roles on 25 October 2026; visible profiles use labelled photo placeholders. Detailed biographies/photos not supplied; professional credentials have not been independently verified. |
-| Photos | Original images retrieved; owner must confirm reuse rights and subject consent |
+| Workers | Owner supplied four names/roles, later corrected Bilal to Bilal Zafar and requested distinct first-person values-focused introductions. Bilal’s supplied photo is used; Issa, Farah and Sujata use clearly labelled illustrations. Professional credentials have not been independently verified. |
+| Photos | Original site images retrieved; Bilal’s photo supplied for this update. Three staff illustrations are placeholders. Record permissions and confirm reuse rights/subject consent for actual photographs. |
 | NDIS registration | Original site publishes `4-JCYQ7LA`; current status/claim permission unverified |
 | Policies | Privacy/accessibility/feedback content requires business review; no legal or WCAG certification asserted |
 | Production URL | Blank in `js/config.js`; sitemap staged against existing business domain; no live deployment authorised |
@@ -47,12 +47,13 @@ Prepared 25 October 2026. The website is a local development deliverable. No per
 
 ## Four staff profiles and images
 
-- [x] Owner supplied and authorised the four profile names/roles: Issa Tamerji — Enrolled Nurse and Director; Farah — Registered Nurse; Sujata — Registered Nurse; Bilal — Enrolled Nurse (25 October 2026).
+- [x] Owner supplied and authorised the four profile names/roles: Issa Tamerji — Enrolled Nurse and Director; Farah — Registered Nurse; Sujata — Registered Nurse; Bilal Zafar — Enrolled Nurse (25 October 2026; Bilal’s surname added in the later photo update).
+- [x] User supplied Bilal Zafar’s photograph and requested three labelled illustrated placeholders plus different values-focused introductions for all four profiles. This does not establish independent credential verification.
 - [ ] Verify each professional credential with the business and staff member before public launch. Website authorisation is not independent credential verification.
 - [ ] Supply any further biography, relevant experience, qualifications, support categories, languages or interests only when accurate and approved. Empty sections may remain omitted.
 - [ ] Obtain and record permission and reuse rights for each genuine staff photograph before replacing its labelled abstract placeholder.
 - [x] Add the four genuine owner-supplied records to `js/workers.js` with stable IDs and `publicationStatus: "approved"`; this controls website visibility only. Keep `enableDevelopmentProfiles: false`.
-- [ ] Keep `photoIsPlaceholder: true` until an approved portrait is supplied; change it to false and update the static homepage/team fallbacks when replacing a photograph.
+- [ ] Keep `photoIsPlaceholder: true` for the three illustrations. Bilal’s supplied photo is false. When replacing an illustration, update the photo path, alternative text, placeholder label/flag and static homepage/team fallback cards together.
 - [ ] Review each current landscape card, role filter, carousel, profile URL and “Enquire About Support” pathway. Confirm a worker enquiry is described as an enquiry rather than a booking. See the dated staff-update verification record.
 - [ ] Confirm reuse licences and participant/subject consent for **all** migrated images. Public availability on the old site is not proof of reuse permission.
 - [ ] Replace any image without confirmed rights/consent. Review alt text for accuracy and avoid inferring medical conditions, names or staff relationships from appearance.
