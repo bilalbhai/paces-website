@@ -407,7 +407,7 @@ li { padding-left: 4px; margin-bottom: 9px; }
   .worker-card { grid-template-columns: 1fr; }
   .worker-card > img, .worker-photo { min-height: 0; max-height: 330px; aspect-ratio: 1.35; object-position: center; }
   .worker-photo { height: auto; min-width: 0; }
-  .worker-photo--bilal { aspect-ratio: 1.05; max-height: 380px; }
+  .worker-photo--bilal { aspect-ratio: 1.05; max-height: none; }
   .worker-photo--bilal img { object-position: 50% 48%; }
   .worker-card-content, .worker-content, .worker-card__content { padding: 25px; }
   .team-track > .worker-card { flex-basis: 100%; }
