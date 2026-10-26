@@ -11,7 +11,7 @@ window.PACES_CONFIG = {
   facebookUrl: 'https://www.facebook.com/prosperandcare',
   instagramUrl: 'https://www.instagram.com/prosperandcare/',
   email: 'support@prosperandcare.com.au',
-  formEndpoint: '', // Paste the public https://formspree.io/f/YOUR_FORM_ID endpoint.
+  formEndpoint: 'https://formspree.io/f/mqpppely', // Public endpoint supplied by the owner.
   feedbackFormEndpoint: '', // Optional separate approved complaints destination.
   publicAddress: '3/67B Brenan Street, Smithfield, Sydney, NSW 2164, Australia',
   serviceAreas: ['Smithfield, NSW', 'Western Sydney and surrounding suburbs'],

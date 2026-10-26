@@ -10,7 +10,7 @@ Open the `paces-website` folder and double-click `index.html`. Keep all folders 
 
 The October 2026 client update includes the final PACES logo, slate blue/sage/cream/coral palette, Poppins, seven service pages, three support steps, ten FAQs and four staff profiles. Staff cards expand on hover, tap or keyboard. Three portraits are clearly labelled illustrations; Bilal uses his supplied photograph.
 
-Main phone: 02 8488 3731. WhatsApp: 0401 339 966. Public email: support@prosperandcare.com.au. Enquiry/referral delivery is inactive until Formspree is configured. No form submission is claimed to have been delivered without a real successful response.
+Main phone: 02 8488 3731. WhatsApp: 0401 339 966. Public email: support@prosperandcare.com.au. Contact and referral forms are connected to the owner-supplied Formspree endpoint. Inbox delivery still needs a real end-to-end receipt test. No form submission is claimed to have been delivered without a real successful response.
 
 ## Editing
 
@@ -48,6 +48,10 @@ The current version retains development noindex metadata, crawl blocking and dra
 `paces-website/` contains the website. `docs/CLIENT_CONTENT_MIGRATION.md` maps the latest client content. `docs/BRAND_DESIGN_SYSTEM.md` explains branding. `docs/CLIENT_UPDATE_TEST_REPORT.md` records current tests. The original-site audit is historical and may describe old branding/services. `docs/source/` is an ignored private working archive and is not published. ZIP downloads are generated copies, not tracked source.
 
 All links use relative paths for local opening and repository-subdirectory hosting. There is no e-commerce or payment functionality.
+
+## Current form connection
+
+Owner-supplied endpoint: https://formspree.io/f/mqpppely. Contact and referral HTML use this action with method POST, and the same endpoint is set in js/config.js. All fields have names. Account email verification, destination inbox and real delivery are controlled in Formspree and must be confirmed by the owner. No test message was sent during setup. Earlier setup instructions remain useful for changing providers/endpoints.
 
 ## Browser caching
 

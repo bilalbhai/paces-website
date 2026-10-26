@@ -1,3 +1,5 @@
+> Update: the owner supplied https://formspree.io/f/mqpppely on 26 October 2026. It is now configured in contact/referral HTML actions and js/config.js, using POST and named fields. Real email receipt and account verification remain untested; no synthetic enquiry was sent. The setup guide below is retained for reference.
+
 # Receive website enquiries by email
 
 No database, server or email password needs to be added to the website. The existing forms are ready for Formspree; they are currently inactive because no endpoint has been supplied.

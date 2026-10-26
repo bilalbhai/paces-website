@@ -10,7 +10,8 @@ Updated 26 October 2026. New brand and business copy come from the supplied clie
 - [ ] Business owner to review final public copy, roles and staff publication consent.
 - [ ] Replace the clearly labelled illustrative portraits for Farah, Issa and Suzie with consented photographs.
 - [ ] Confirm permission to reuse all original website photography. Bilal's supplied image is used unchanged.
-- [ ] Configure Formspree in js/config.js, verify the authorised inbox, submit a real test and confirm receipt. Enquiry and referral delivery remain inactive until configured. Feedback has its own optional endpoint.
+- [x] Configure owner-supplied Formspree endpoint mqpppely in js/config.js and contact/referral HTML actions; POST and field names verified.
+- [ ] Owner to verify the Formspree destination inbox, submit a real test and confirm receipt. Delivery has not been tested. Feedback retains its own optional endpoint.
 - [ ] Review and approve privacy, accessibility and complaints text. No legal or WCAG certification is asserted.
 - [x] Verified the official NDIS Commission provider listing: Approved, registration in force until 19 February 2027. Added the original NDIS registered-provider artwork to every footer on 26 October 2026; removed the header label at the owner’s request. Artwork copied unchanged from https://prosperandcare.com.au/wp-content/uploads/2024/03/ndis-registered.jpg. Recheck before expiry. Source: https://www.ndiscommission.gov.au/provider-registration/prosper-and-care-endeavour-services-pty-ltd
 - [ ] Restore repository public visibility and GitHub Pages main / (root) if still disabled after the earlier privacy change.
