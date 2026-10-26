@@ -1,75 +1,50 @@
-# P.A.C.E.S. website
+# PACES website
 
-The website for **Prosper and Care Endeavour Services (P.A.C.E.S.)**, a disability support business in Sydney, Australia.
-
-It uses plain **HTML, CSS and JavaScript**. There are no packages, build commands, shopping carts or payment features.
+A real disability support website for Prosper and Care Endeavour Services, Smithfield / Western Sydney. Built with plain HTML, CSS and vanilla JavaScript. No installation, packages or build step.
 
 ## Preview on your computer
 
-Open `paces-website/index.html` in your browser. You can also open the `index.html` in this repository's main folder; it takes you to the same website. No installation or server is required.
+Open the `paces-website` folder and double-click `index.html`. Keep all folders together. Local navigation, service pages, team disclosures and FAQs work without a server. Internet is needed for Google Fonts, WhatsApp, social links and configured form delivery. Fonts fall back offline.
 
-## What is included
+## Current content
 
-- A homepage and six detailed service pages.
-- About, team, support process, contact, referral, FAQ, feedback, privacy and accessibility pages.
-- Four staff profiles, individual profile links and worker-specific enquiries.
-- Responsive layouts, keyboard navigation and mobile contact buttons.
+The October 2026 client update includes the final PACES logo, slate blue/sage/cream/coral palette, Poppins, seven service pages, three support steps, ten FAQs and four staff profiles. Staff cards expand on hover, tap or keyboard. Three portraits are clearly labelled illustrations; Bilal uses his supplied photograph.
 
-## Where the files are
+Main phone: 02 8488 3731. WhatsApp: 0401 339 966. Public email: support@prosperandcare.com.au. Enquiry/referral delivery is inactive until Formspree is configured. No form submission is claimed to have been delivered without a real successful response.
 
-```text
-index.html             Entry page that opens the website folder
-paces-website/
-  index.html           Website homepage
-  services/            Individual service pages
-  css/style.css        Colours, fonts and layout
-  js/config.js         Public contact and form settings
-  js/workers.js        Staff names, roles and profile information
-  images/              Logo, photographs and photo placeholders
-  docs/                Project audit, design and review documents
-  README.md            Detailed editing and setup guide
-```
+## Editing
 
-The `.gitignore` keeps generated ZIPs, local credentials and the original-site source archive out of Git. Those files remain on your computer. The public website configuration is included because the site needs it; it must never contain passwords or private keys.
+1. **Phone:** edit `phoneDisplay` and `phoneE164` in `paces-website/js/config.js`. Also update matching static telephone links/text in HTML so they work before JavaScript loads.
+2. **WhatsApp:** edit `whatsappNumber` (international digits only), `whatsappConfirmed` and message in config. Update the static `wa.me` fallbacks too.
+3. **Forms:** create a Formspree form using the authorised business inbox, verify that inbox, then paste the public HTTPS endpoint into `formEndpoint`. No secret keys belong here. Optionally configure `feedbackFormEndpoint` separately. The script sets POST actions and manages validation/status. Submit a real test and confirm the client receives it before advertising delivery. Formspree account limits/spam settings are managed at the provider.
+4. **Workers:** copy an object in `js/workers.js`, use a unique stable ID, add genuine approved details and set the publication status appropriately. Never invent credentials. Keep development profiles unpublished. Test `worker.html?id=YOUR_ID` and enquiry preselection.
+5. **Photos:** place consented images in `images/workers/`, change the worker photo path/alt and remove placeholder labelling only when using a genuine approved photograph. Keep images reasonably sized.
+6. **Services:** edit `js/services.js` for cards and selectors, and edit the corresponding static HTML page for searchable detail text. Keep both consistent. Changing the number of services also requires updating overview/footer links and sitemap.
+7. **Brand:** all palette/style rules are in `css/style.css`. Logo paths point to `images/logo/paces-logo.png`; the supplied JPG wordmark is used for social metadata. Keep the supplied logo proportions.
 
-## Edit the website
+## Publish using GitHub Pages
 
-Change the HTML for page text, `paces-website/css/style.css` for design, and `paces-website/js/config.js` for public contact settings. Staff data is in `paces-website/js/workers.js`.
+This repository has a root `index.html` redirect to the nested website folder. Preserve that structure.
 
-Read the [detailed guide](paces-website/README.md) for photos, service descriptions, forms and other changes.
+1. Push these files to the GitHub repository using plain git.
+2. For free GitHub Pages on a free account, keep the repository public.
+3. On GitHub open the repository → Settings → Pages.
+4. Choose Deploy from a branch, select `main` and `/ (root)`, then Save.
+5. Wait for GitHub's deployment to finish and open the URL shown there.
 
-## Save changes with Git
+Repository URL: https://github.com/bilalbhai/paces-website
+Expected Pages entry: https://bilalbhai.github.io/paces-website/
+The nested site URL is https://bilalbhai.github.io/paces-website/paces-website/
+If the repository was made private and Pages shows 404, restore public visibility and check Pages settings again. Code being pushed does not by itself prove Pages is enabled.
 
-From this repository's main folder:
+## Custom domain and launch
 
-```text
-git status
-git add .
-git commit -m "Describe the change"
-```
+Connect a custom domain only after the owner authorises it. In GitHub Pages add the approved domain and follow GitHub's DNS instructions with the domain provider. Confirm HTTPS. Then update websiteUrl in config, all static canonical and Open Graph URLs, sitemap.xml and robots.txt to the final URL.
 
-Git makes a local record of your files. A later `git push` sends committed changes to GitHub, after a remote repository has been connected.
+The current version retains development noindex metadata, crawl blocking and draft policy notices. Complete `docs/CLIENT_APPROVAL_CHECKLIST.md` before changing publicationMode to production and enabling indexing. Test genuine form delivery, real contact destinations and staff/photo consent.
 
-## Publish with GitHub Pages
+## Project files
 
-After the code has been pushed:
+`paces-website/` contains the website. `docs/CLIENT_CONTENT_MIGRATION.md` maps the latest client content. `docs/BRAND_DESIGN_SYSTEM.md` explains branding. `docs/CLIENT_UPDATE_TEST_REPORT.md` records current tests. The original-site audit is historical and may describe old branding/services. `docs/source/` is an ignored private working archive and is not published. ZIP downloads are generated copies, not tracked source.
 
-1. Open the repository on GitHub.
-2. Select **Settings → Pages**.
-3. Select **Deploy from a branch**.
-4. Choose **main** and **/(root)**, then Save. This project's branch is `main`.
-5. Open the website link shown by GitHub when deployment finishes.
-
-The root entry page forwards visitors into `paces-website/`, preserving the existing project structure and relative links. No custom domain or DNS change is needed for a GitHub Pages address. The website's final base URL for SEO settings will include `/paces-website/`.
-
-Public repositories can use GitHub Pages on GitHub Free. Private-repository Pages requires an eligible paid plan. See [GitHub Pages availability](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages).
-
-## Settings still to finish
-
-- WhatsApp needs a confirmed, authorised number.
-- Online enquiry delivery needs a configured external form endpoint and a tested business inbox.
-- Bilal Zafar uses the supplied staff photo. Issa, Farah and Sujata use clearly labelled illustrated placeholders until their real portraits are supplied.
-- Privacy, accessibility, image permissions and other launch items need review.
-- Search indexing remains in development mode until the production URL and launch settings are confirmed.
-
-See the [client checklist](paces-website/docs/CLIENT_APPROVAL_CHECKLIST.md). Pushing code does not activate these services or change the existing business domain.
+All links use relative paths for local opening and repository-subdirectory hosting. There is no e-commerce or payment functionality.

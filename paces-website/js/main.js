@@ -1,4 +1,4 @@
-/* P.A.C.E.S. interactions. Classic scripts work directly from file://. */
+/* PACES interactions. Classic scripts work directly from file://. */
 (function () {
   "use strict";
 
@@ -40,7 +40,7 @@
           }
           ogUrl.content = pageUrl;
           var ogImage = document.querySelector("meta[property='og:image']");
-          if (ogImage) ogImage.content = new URL("images/general/home.jpg", siteUrl).href;
+          if (ogImage) ogImage.content = new URL("images/logo/paces-wordmark.jpg", siteUrl).href;
           var businessData = document.createElement("script");
           businessData.type = "application/ld+json";
           businessData.id = "paces-business-data";
@@ -53,6 +53,7 @@
             areaServed: config.serviceAreas || []
           };
           if (config.email) organisation.email = config.email;
+          if (config.publicAddress) organisation.address = config.publicAddress;
           businessData.textContent = JSON.stringify(organisation);
           document.head.appendChild(businessData);
         }
@@ -132,6 +133,86 @@
       return article;
     }
 
+    // Native details keep the team cards usable with touch, keyboard and no JavaScript.
+    function expandableWorkerCard(worker) {
+      var card = make("details", "team-profile-card");
+      var summary = make("summary", "team-profile-summary");
+      summary.setAttribute("aria-label", "About " + worker.name + ", " + worker.role);
+      var heading = make("h3", "team-profile-heading");
+      var portrait = make("span", "team-profile-photo");
+      if (worker.id === "bilal") portrait.classList.add("team-profile-photo--bilal");
+      var photograph = make("img");
+      photograph.src = root + worker.photo;
+      photograph.alt = worker.photoAlt || (worker.photoIsPlaceholder
+        ? "Illustrative placeholder for " + worker.name
+        : "Photograph of " + worker.name);
+      photograph.width = worker.photoWidth || 600;
+      photograph.height = worker.photoHeight || 700;
+      photograph.loading = "lazy";
+      portrait.appendChild(photograph);
+      if (worker.photoIsPlaceholder) portrait.appendChild(make("span", "team-profile-placeholder", "Illustrative placeholder"));
+      var caption = make("span", "team-profile-caption");
+      var identity = make("span", "team-profile-identity");
+      identity.appendChild(make("span", "team-profile-name", worker.name));
+      identity.appendChild(make("span", "team-profile-role", worker.role));
+      var indicator = make("span", "team-profile-toggle", "+");
+      indicator.setAttribute("aria-hidden", "true");
+      caption.append(identity, indicator);
+      heading.append(portrait, caption);
+      summary.appendChild(heading);
+      var introduction = make("div", "team-profile-introduction");
+      introduction.setAttribute("role", "region");
+      introduction.setAttribute("aria-label", worker.name + " introduction");
+      introduction.appendChild(make("p", "", worker.biography));
+      var enquiry = make("a", "button button-primary", "Enquire About Support");
+      enquiry.href = workerLink("contact.html", worker, "worker");
+      var profile = make("a", "text-link", "View full profile →");
+      profile.href = workerLink("worker.html", worker, "id");
+      introduction.append(enquiry, profile);
+      card.append(summary, introduction);
+      return card;
+    }
+
+    function enableTeamCardHover(container) {
+      var hoverAvailable = window.matchMedia("(hover: hover) and (pointer: fine)");
+      container.querySelectorAll(".team-profile-card").forEach(function (card) {
+        var summary = card.querySelector("summary");
+        card.addEventListener("pointerenter", function (event) {
+          if (!hoverAvailable.matches || event.pointerType === "touch" || card.open) return;
+          card.dataset.hoverOpen = "true";
+          card.open = true;
+        });
+        function closeHoverCard() {
+          if (card.dataset.hoverOpen !== "true") return;
+          if (card.contains(document.activeElement)) return;
+          card.open = false;
+          delete card.dataset.hoverOpen;
+        }
+        card.addEventListener("pointerleave", closeHoverCard);
+        card.addEventListener("focusout", function (event) {
+          if (card.dataset.hoverOpen === "true" && !card.matches(":hover") && !card.contains(event.relatedTarget)) {
+            card.open = false;
+            delete card.dataset.hoverOpen;
+          }
+        });
+        // A deliberate click/tap uses the native disclosure state rather than hover.
+        summary.addEventListener("click", function (event) {
+          if (card.dataset.hoverOpen === "true" && event.detail > 0) {
+            event.preventDefault();
+            card.open = true;
+          }
+          delete card.dataset.hoverOpen;
+        });
+        card.addEventListener("keydown", function (event) {
+          if (event.key !== "Escape" || !card.open) return;
+          event.preventDefault();
+          card.open = false;
+          delete card.dataset.hoverOpen;
+          summary.focus();
+        });
+      });
+    }
+
     // Every telephone and WhatsApp control reads the same public configuration.
     document.querySelectorAll("[data-phone]").forEach(function (link) {
       if (config.phoneE164) link.href = "tel:" + config.phoneE164;
@@ -144,11 +225,11 @@
     document.querySelectorAll("[data-whatsapp]").forEach(function (link) {
       if (whatsappReady) {
         link.href = "https://wa.me/" + config.whatsappNumber + "?text=" + encodeURIComponent(
-          config.whatsappMessage || "Hi P.A.C.E.S., I would like to know more about your disability support services."
+          config.whatsappMessage || "Hi PACES, I would like to know more about your disability support services."
         );
         link.target = "_blank";
         link.rel = "noopener noreferrer";
-        link.setAttribute("aria-label", "WhatsApp P.A.C.E.S. (opens in a new tab)");
+        link.setAttribute("aria-label", "WhatsApp PACES (opens in a new tab)");
       } else {
         link.href = root + "contact.html#contact-options";
         link.removeAttribute("target");
@@ -159,6 +240,15 @@
     });
     document.querySelectorAll("[data-whatsapp-status]").forEach(function (notice) {
       notice.hidden = whatsappReady;
+    });
+    var socialUrls = { facebook: config.facebookUrl, instagram: config.instagramUrl };
+    document.querySelectorAll("[data-social]").forEach(function (link) {
+      var configuredUrl = socialUrls[link.dataset.social];
+      if (!configuredUrl) return;
+      try {
+        var socialUrl = new URL(configuredUrl);
+        if (socialUrl.protocol === "https:") link.href = socialUrl.href;
+      } catch (error) { /* Keep the approved static link if a setting is mistyped. */ }
     });
     document.querySelectorAll("[data-email]").forEach(function (link) {
       if (config.email) {
@@ -267,7 +357,11 @@
         var visible = workers.filter(function (worker) {
           return !category || (filterByRole ? worker.role === category : (worker.supportCategories || []).indexOf(category) !== -1);
         });
-        visible.forEach(function (worker) { directory.appendChild(workerCard(worker, false)); });
+        visible.forEach(function (worker) {
+          directory.appendChild(directory.dataset.workerLayout === "expandable"
+            ? expandableWorkerCard(worker) : workerCard(worker, false));
+        });
+        if (directory.dataset.workerLayout === "expandable") enableTeamCardHover(directory);
         if (!visible.length) directory.appendChild(make("p", "empty-state", "No published profiles match this filter. Please contact the team to discuss your support needs."));
         var resultCount = document.querySelector("[data-worker-count]");
         if (resultCount) resultCount.textContent = visible.length + " profile" + (visible.length === 1 ? "" : "s");
@@ -291,7 +385,7 @@
       var selectedWorker = workers.find(function (worker) { return worker.id === parameters.get("id"); });
       if (selectedWorker) {
         profileContainer.replaceChildren(workerCard(selectedWorker, true));
-        if (selectedWorker.publicationStatus === "approved") document.title = selectedWorker.name + " | P.A.C.E.S. Support Team";
+        if (selectedWorker.publicationStatus === "approved") document.title = selectedWorker.name + " | PACES Support Team";
       }
     }
 
@@ -439,7 +533,7 @@
           var providerAcknowledged = result && (result.ok === true || result.success === true);
           // A 2xx HTML page may be a login/CAPTCHA screen, not an accepted enquiry.
           if (!response.ok || !providerAcknowledged || providerErrors) throw new Error("The form provider did not confirm acceptance of the enquiry.");
-          status.textContent = "Your enquiry has been accepted by our form service. Thank you for contacting P.A.C.E.S. An enquiry does not confirm a service booking.";
+          status.textContent = "Your enquiry has been accepted by our form service. Thank you for contacting PACES An enquiry does not confirm a service booking.";
           status.classList.add("is-success");
           form.reset();
           fields.forEach(clearError);

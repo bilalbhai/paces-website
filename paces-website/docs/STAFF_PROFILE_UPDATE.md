@@ -1,6 +1,26 @@
+# Staff update — 26 October 2026
+
+The latest client document supersedes earlier roles and introductions. Farah Abbas: Director. Issa Tamerji: Operations Manager. Suzie Bogati: Team Leader. The owner confirmed Suzie and Sujata Bogati are the same person; the stable URL ID remains sujata. Bilal Zafar remains Enrolled Nurse with his supplied photograph.
+
+Three other portraits are labelled illustrative placeholders, not photographs of those staff. Current biographies are in js/workers.js. No extra qualifications or languages were invented. The owner should confirm consent and final wording before launch.
+
+---
+
 # Staff profile update
 
 Date: 25 October 2026 (Australia/Sydney).
+
+## Latest team grid and contact links update — 25 October 2026
+
+- Our Team now has one four-card grid, replacing its carousel and repeated directory. A collapsed card shows only its photo, name and supplied role. Desktop hover opens the introduction; phone tap and native keyboard activation provide the same information and profile/enquiry links. There is no autoplay.
+- The homepage carousel remains in place because this layout change is scoped to Our Team. Both displays continue to use the same worker data, photo flags and stable profile/enquiry IDs.
+- The owner confirmed **0401 339 966** as the WhatsApp contact. Public configuration uses `whatsappNumber: '61401339966'` and `whatsappConfirmed: true`; links include the URL-encoded prefilled message. This is owner confirmation, not evidence that a message has been delivered to the account.
+- The owner supplied Facebook `https://www.facebook.com/prosperandcare` and Instagram `https://www.instagram.com/prosperandcare/`. Footer social icons appear on all 18 pages, with `facebookUrl` and `instagramUrl` centralised in the public configuration and static fallback links in the HTML.
+- Staff names, supplied roles, Bilal Zafar's real photo and the three labelled illustrations are unchanged. Enquiry form delivery remains inactive, and policy pages remain drafts.
+
+### Verification of team grid and contact links
+
+The main agent will record executed layout, keyboard/tap, link and publication checks here. Actual WhatsApp recipient/conversation testing has not been performed by sending a message.
 
 ## Current photo, name and introduction update — 25 October 2026
 
@@ -10,7 +30,7 @@ Date: 25 October 2026 (Australia/Sydney).
 - All four profiles now have different first-person introductions requested by the business, centred on listening, respect, kindness, choice and everyday support. This is website copy, not an independently verified staff quotation or evidence of additional qualifications, experience, duties or availability.
 - Homepage/team static fallback cards must stay in sync with `js/workers.js` for names, biography text, images, labels and links.
 
-### Verification of this latest update
+### Verification of the photo and introduction update
 
 - Browser-checked the homepage, team page and all four individual profiles at 320, 375, 390, 430, 768, 1024 and 1440px: 42 page/width checks with no document overflow, failed completed images or collapsed portrait areas.
 - Reviewed the supplied photo and all three illustrations visually. Bilal's photo uses a taller mobile frame to retain his face; its source bytes are unchanged from the supplied JPEG. Only the illustrations carry placeholder labels.

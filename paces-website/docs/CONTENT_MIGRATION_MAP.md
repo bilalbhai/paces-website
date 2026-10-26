@@ -1,3 +1,5 @@
+> Current client update: see [CLIENT_CONTENT_MIGRATION.md](CLIENT_CONTENT_MIGRATION.md). The mapping below records the original website migration and may describe superseded services/branding.
+
 # Content migration map
 
 Prepared 25 October 2026. This checklist maps the substantive original website content to the redesigned files. “Migrated” means present in the local deliverable; it does not mean approved for public launch. See [EXISTING_WEBSITE_AUDIT.md](EXISTING_WEBSITE_AUDIT.md) and [CLIENT_APPROVAL_CHECKLIST.md](CLIENT_APPROVAL_CHECKLIST.md).

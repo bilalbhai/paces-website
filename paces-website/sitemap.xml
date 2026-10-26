@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- STAGED: proposed existing business domain only. Confirm actual production base URL,
-     replace all locations and publish only after approval. Excludes development profiles. -->
+<!-- Review site: confirm final production domain and launch approval before indexing. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://prosperandcare.com.au/</loc></url>
-  <url><loc>https://prosperandcare.com.au/about.html</loc></url>
-  <url><loc>https://prosperandcare.com.au/services.html</loc></url>
-  <url><loc>https://prosperandcare.com.au/team.html</loc></url>
-  <url><loc>https://prosperandcare.com.au/how-it-works.html</loc></url>
-  <url><loc>https://prosperandcare.com.au/contact.html</loc></url>
-  <url><loc>https://prosperandcare.com.au/referral.html</loc></url>
-  <url><loc>https://prosperandcare.com.au/faq.html</loc></url>
-  <url><loc>https://prosperandcare.com.au/feedback.html</loc></url>
-  <url><loc>https://prosperandcare.com.au/privacy.html</loc></url>
-  <url><loc>https://prosperandcare.com.au/accessibility.html</loc></url>
-  <url><loc>https://prosperandcare.com.au/services/community-participation.html</loc></url>
-  <url><loc>https://prosperandcare.com.au/services/home-care.html</loc></url>
-  <url><loc>https://prosperandcare.com.au/services/transportation.html</loc></url>
-  <url><loc>https://prosperandcare.com.au/services/day-programs.html</loc></url>
-  <url><loc>https://prosperandcare.com.au/services/skill-building.html</loc></url>
-  <url><loc>https://prosperandcare.com.au/services/weekend-programs.html</loc></url>
+<url><loc>https://bilalbhai.github.io/paces-website/paces-website/</loc></url>
+<url><loc>https://bilalbhai.github.io/paces-website/paces-website/about.html</loc></url>
+<url><loc>https://bilalbhai.github.io/paces-website/paces-website/services.html</loc></url>
+<url><loc>https://bilalbhai.github.io/paces-website/paces-website/team.html</loc></url>
+<url><loc>https://bilalbhai.github.io/paces-website/paces-website/how-it-works.html</loc></url>
+<url><loc>https://bilalbhai.github.io/paces-website/paces-website/contact.html</loc></url>
+<url><loc>https://bilalbhai.github.io/paces-website/paces-website/referral.html</loc></url>
+<url><loc>https://bilalbhai.github.io/paces-website/paces-website/faq.html</loc></url>
+<url><loc>https://bilalbhai.github.io/paces-website/paces-website/feedback.html</loc></url>
+<url><loc>https://bilalbhai.github.io/paces-website/paces-website/privacy.html</loc></url>
+<url><loc>https://bilalbhai.github.io/paces-website/paces-website/accessibility.html</loc></url>
+<url><loc>https://bilalbhai.github.io/paces-website/paces-website/services/group-centre-based-activities.html</loc></url>
+<url><loc>https://bilalbhai.github.io/paces-website/paces-website/services/daily-living.html</loc></url>
+<url><loc>https://bilalbhai.github.io/paces-website/paces-website/services/personalised-mentorship.html</loc></url>
+<url><loc>https://bilalbhai.github.io/paces-website/paces-website/services/community-participation.html</loc></url>
+<url><loc>https://bilalbhai.github.io/paces-website/paces-website/services/supported-independent-living.html</loc></url>
+<url><loc>https://bilalbhai.github.io/paces-website/paces-website/services/short-term-accommodation-respite.html</loc></url>
+<url><loc>https://bilalbhai.github.io/paces-website/paces-website/services/support-coordination.html</loc></url>
 </urlset>

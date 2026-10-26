@@ -4,7 +4,7 @@
   <defs>
     <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
       <stop stop-color="#eef4e9"/>
-      <stop offset="1" stop-color="#faf7f0"/>
+      <stop offset="1" stop-color="#faf3dd"/>
     </linearGradient>
     <linearGradient id="top" x1="0" y1="0" x2="1" y2="1">
       <stop stop-color="#cf7937"/>
@@ -14,9 +14,9 @@
   <path fill="url(#background)" d="M0 0h600v700H0z"/>
   <circle cx="302" cy="293" r="218" fill="#cce1cc"/>
   <path d="M0 0h103c41 59 14 102-103 120Z" fill="#f9dbb2"/>
-  <circle cx="548" cy="82" r="94" fill="#faf7f0"/>
-  <path d="M0 593c76-17 135 14 159 107H0Z" fill="#9accae"/>
-  <circle cx="502" cy="506" r="12" fill="#f6931d"/>
+  <circle cx="548" cy="82" r="94" fill="#faf3dd"/>
+  <path d="M0 593c76-17 135 14 159 107H0Z" fill="#8faf8c"/>
+  <circle cx="502" cy="506" r="12" fill="#d67a6c"/>
   <path d="M187 184c8-69 50-109 114-109 65 0 108 40 116 109l21 206c-27 34-75 52-137 52s-110-18-137-52Z" fill="#354137"/>
   <path d="M126 700V545c0-80 72-133 174-133s174 53 174 133v155Z" fill="url(#top)"/>
   <path d="M258 346h84v80c0 22-19 38-42 38s-42-16-42-38Z" fill="#bc8b68"/>
