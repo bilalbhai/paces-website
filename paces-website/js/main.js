@@ -421,7 +421,7 @@
         status.textContent = "Online submissions are not active yet. You can check your details here, but they will not be sent. Please call " + (config.phoneDisplay || "our team") + " to enquire.";
         status.classList.add("is-pending");
       } else {
-        status.textContent = "Please complete the required fields. Avoid including medical information or other sensitive details.";
+        status.textContent = "";
         status.classList.remove("is-pending");
       }
       form.querySelectorAll("[data-form-setup]").forEach(function (notice) { notice.hidden = endpointReady; });
