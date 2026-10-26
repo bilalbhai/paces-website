@@ -24,3 +24,7 @@
 - Policies and search indexing remain in development review status.
 
 The large multi-width test batch initially exceeded the browser tool time limit. It was rerun successfully in smaller batches; that timeout was not counted as a successful test.
+
+## Card polish follow-up
+
+Browser-verified service hover: translateY(-6px) and image scale(1.045). Team Enter/Escape disclosures and introduction animation work. At 375px, home/services/team have no horizontal overflow; tapping a team card opens it. Reduced-motion overrides were inspected in the stylesheet; OS-level reduced-motion emulation was not performed in this follow-up. Stylesheet/script version advanced to 20261026-3 to avoid stale cached branding.

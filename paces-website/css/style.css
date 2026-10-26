@@ -126,10 +126,8 @@ li { padding-left: 4px; margin-bottom: 9px; }
 .quote-line { margin: 28px 0; padding-left: 20px; border-left: 3px solid var(--brand-coral); font: 600 23px/1.5 'Poppins', Arial, sans-serif; letter-spacing: -.03em; color: var(--ink); }
 .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
 .service-card { min-width: 0; background: white; border: 1px solid #cdd7cf; border-radius: 17px; overflow: hidden; transition: transform .25s, box-shadow .25s; }
-.service-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
 .service-card .image-wrap { overflow: hidden; position: relative; aspect-ratio: 1.66; background: var(--sage-pale); }
 .service-card img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
-.service-card:hover img { transform: scale(1.035); }
 .service-number { position: absolute; top: 15px; left: 15px; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--cream); color: var(--ink); font-size: 11px; font-weight: 700; }
 .service-card-content { padding: 25px 26px 24px; }
 .service-card h3 { margin-bottom: 12px; font-size: 21px; }
@@ -169,7 +167,6 @@ li { padding-left: 4px; margin-bottom: 9px; }
 /* Our team: every profile is visible in one grid, with native expandable introductions. */
 .team-profile-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; align-items: start; }
 .team-profile-card { min-width: 0; border: 1px solid var(--line); border-radius: 18px; background: white; overflow: hidden; transition: box-shadow .2s, border-color .2s; }
-.team-profile-card:hover, .team-profile-card[open] { border-color: var(--coral-dark); box-shadow: var(--shadow); }
 .team-profile-summary { position: relative; display: block; list-style: none; cursor: pointer; }
 .team-profile-summary::-webkit-details-marker { display: none; }
 .team-profile-summary::marker { content: ''; }
@@ -178,7 +175,6 @@ li { padding-left: 4px; margin-bottom: 9px; }
 .team-profile-photo { display: block; position: relative; overflow: hidden; aspect-ratio: .82; background: var(--sage-pale); }
 .team-profile-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
 .team-profile-photo--bilal img { object-position: 50% 58%; }
-.team-profile-card:hover .team-profile-photo img { transform: scale(1.025); }
 .team-profile-placeholder { position: absolute; left: 11px; top: 11px; right: 11px; width: fit-content; max-width: calc(100% - 22px); padding: 5px 8px; border-radius: 5px; color: var(--ink); background: var(--cream); font: 600 10px/1.5 'Poppins', Arial, sans-serif; }
 .team-profile-caption { position: absolute; bottom: 0; left: 0; right: 0; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 18px 17px; background: rgb(38 55 70 / 96%); color: white; }
 .team-profile-identity { min-width: 0; }
@@ -562,4 +558,50 @@ h3, h4 { color: var(--coral-dark); font-weight: 600; }
   .brand { gap: 9px; }
   .brand-name { max-width: 120px; font-size: 9px; }
   .hero h1 { font-size: 36px; }
+}
+
+/* Quiet depth and deliberate motion: touch layouts remain stable. */
+:root {
+  --card-shadow: 0 3px 8px rgb(38 55 70 / 3%), 0 14px 32px -16px rgb(38 55 70 / 20%);
+  --card-shadow-raised: 0 8px 18px -8px rgb(38 55 70 / 13%), 0 26px 48px -20px rgb(38 55 70 / 28%);
+  --ease-polished: cubic-bezier(.22, .61, .36, 1);
+}
+.service-card, .team-profile-card {
+  border-color: rgb(91 116 140 / 20%);
+  box-shadow: var(--card-shadow);
+  transition: transform .32s var(--ease-polished), box-shadow .32s var(--ease-polished), border-color .32s;
+}
+.service-card .image-wrap::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, transparent 60%, rgb(38 55 70 / 9%));
+}
+.service-card img, .team-profile-photo img { transition: transform .65s var(--ease-polished); }
+.service-number { box-shadow: 0 3px 12px rgb(38 55 70 / 12%); }
+.service-card-content { position: relative; }
+.service-card-content::before {
+  content: ''; position: absolute; top: 0; left: 26px; width: 38px; height: 3px;
+  border-radius: 0 0 3px 3px; background: var(--brand-coral);
+  transition: width .35s var(--ease-polished);
+}
+.team-profile-caption { background: linear-gradient(115deg, #263746, #344b5d); }
+.team-profile-toggle { transition: transform .3s var(--ease-polished), background .3s, border-color .3s; }
+.team-profile-card[open], .service-card:focus-within, .team-profile-card:focus-within {
+  border-color: var(--brand-blue); box-shadow: var(--card-shadow-raised);
+}
+.team-profile-card[open] .team-profile-toggle { background: var(--brand-coral); border-color: var(--brand-coral); color: #14232d; }
+.team-profile-card[open] .team-profile-introduction { animation: introduction-in .25s var(--ease-polished) both; }
+@keyframes introduction-in { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: none; } }
+@media (hover: hover) and (pointer: fine) {
+  .service-card:hover, .team-profile-card:hover { transform: translateY(-6px); border-color: var(--brand-blue); box-shadow: var(--card-shadow-raised); }
+  .service-card:hover img { transform: scale(1.045); }
+  .team-profile-card:hover .team-profile-photo img { transform: scale(1.035); }
+  .service-card:hover .service-card-content::before, .service-card:focus-within .service-card-content::before { width: 70px; }
+  .service-card:hover .text-link svg { transform: translateX(4px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .service-card, .team-profile-card, .service-card img, .team-profile-photo img,
+  .service-card-content::before, .team-profile-toggle { transition: none; }
+  .service-card:hover, .team-profile-card:hover, .service-card:hover img,
+  .team-profile-card:hover .team-profile-photo img, .service-card:hover .text-link svg { transform: none; }
+  .team-profile-card[open] .team-profile-introduction { animation: none; }
 }
