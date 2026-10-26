@@ -51,4 +51,4 @@ All links use relative paths for local opening and repository-subdirectory hosti
 
 ## Browser caching
 
-HTML stylesheet and script links include a public version query (currently `v=20261026-3`) so a brand update does not reuse older cached assets. When publishing future CSS/JavaScript changes, update that version consistently in all HTML pages. These relative links still work when opening files locally. If an already-open page looks outdated, reload it with Ctrl+Shift+R.
+HTML stylesheet and script links include a public version query (stylesheet currently `v=20261026-5`; individual scripts may have separate versions) so a brand update does not reuse older cached assets. When publishing future CSS/JavaScript changes, update that version consistently in all HTML pages. These relative links still work when opening files locally. If an already-open page looks outdated, reload it with Ctrl+Shift+R.
