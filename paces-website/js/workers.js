@@ -59,7 +59,7 @@ window.PACES_WORKERS = [
     "photoIsPlaceholder": false,
     "photoWidth": 1152,
     "photoHeight": 2048,
-    "biography": "Bilal takes pride in supporting people to feel confident and involved in their everyday lives. As an Enrolled Nurse at PACES, he values respectful communication, a friendly approach and taking the time to understand each person’s preferences.",
+    "biography": "Bilal brings an IT background and a passion for helping people make positive changes in their lives. Alongside his role as an Enrolled Nurse, he is the person behind the PACES website, combining his technical skills with a caring, people-focused approach. He values meaningful connections and helping each person feel heard, respected and supported.",
     "qualifications": [],
     "experience": [],
     "supportCategories": [],
