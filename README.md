@@ -48,3 +48,7 @@ The current version retains development noindex metadata, crawl blocking and dra
 `paces-website/` contains the website. `docs/CLIENT_CONTENT_MIGRATION.md` maps the latest client content. `docs/BRAND_DESIGN_SYSTEM.md` explains branding. `docs/CLIENT_UPDATE_TEST_REPORT.md` records current tests. The original-site audit is historical and may describe old branding/services. `docs/source/` is an ignored private working archive and is not published. ZIP downloads are generated copies, not tracked source.
 
 All links use relative paths for local opening and repository-subdirectory hosting. There is no e-commerce or payment functionality.
+
+## Browser caching
+
+HTML stylesheet and script links include a public version query (currently `v=20261026-2`) so a brand update does not reuse older cached assets. When publishing future CSS/JavaScript changes, update that version consistently in all HTML pages. These relative links still work when opening files locally. If an already-open page looks outdated, reload it with Ctrl+Shift+R.
