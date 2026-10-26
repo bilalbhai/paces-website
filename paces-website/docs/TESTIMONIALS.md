@@ -1,9 +1,19 @@
 # Testimonials — 26 October 2026
 
-Six homepage quotations supplied by the owner: five pasted Google reviews attributed to Ana K, Maryann Rebello, Azra Sehic, hanan zureiqat and najah sanoussi; one Sharon Francis testimonial transcribed from the supplied screenshot of the PACES Instagram post.
+## Current version
 
-Quotation wording is retained, including original spelling, punctuation and capitalisation. Google links point to the supplied contributor review profiles, not review-specific permalinks. Instagram source is the post URL visible in the screenshot. The sources could not be fetched by the research tool, so independent source verification was not completed. No stars, aggregate rating, reviewer photos, relative dates or review-count claims were added. No Google/Instagram scripts or embeds load on the site.
+Six homepage reviews: Ana K, Maryann Rebello, Sharon Francis, Azra Sehic, Hanan Zureiqat and Najah Sanoussi. The owner requested sentence/name capitalisation cleanup, business-profile links, five stars and a more polished presentation.
 
-Edit quotations and attributions in index.html inside #testimonials. Style rules are in css/style.css. Preserve source attribution when making changes. No review structured data was added.
+Source: https://share.google/MLPwsQKNNgVHhj8qO
 
-Verified in local browser at 320, 375, 768 and 1440px: six cards, expected one/two/three columns, no horizontal overflow. Desktop screenshot visually inspected, and keyboard navigation reached the source links with a visible focus indicator. Cards use semantic figure/blockquote/figcaption markup and decorative initials rather than invented portraits.
+The short link was opened in the browser and resolved to the PACES Google Business Profile in Smithfield. The review panel contained all six named reviews, including Sharon. Each featured review's visible star SVGs showed five filled stars. The profile displayed 5.0 from eight reviews on this date. The website does not publish a changing review count or aggregate rating claim.
+
+The pasted quotations and screenshot transcription are retained. A case-insensitive comparison against the previous version confirmed no review wording or punctuation changed. Azra's uppercase THANK YOU became Thank you; Hanan and Najah's names use initial capitals. All six source labels now read Google Review. Every testimonial link and the section CTA point to the supplied business-profile link; none link individual contributor profiles or Instagram.
+
+Stars have screen-reader labels. Decorative quote marks and initials are hidden from assistive technology. No reviewer photos, third-party scripts, tracking embeds or review structured data were added.
+
+Cards use subtle brand-coloured borders, soft layered shadows, a sage-to-cream section background and dedicated business-profile buttons. Edit the static section #testimonials in index.html and styling in css/style.css.
+
+## Verification
+
+Browser checked at 320, 375, 768 and 1440px: all six ratings present, no horizontal overflow. Desktop screenshot visually inspected and keyboard source-link focus checked. Automated source comparison confirmed quote changes are limited to case, and all seven section links match the supplied business URL. CSS version is 20261026-6 to avoid cached styling.

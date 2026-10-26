@@ -626,3 +626,21 @@ h3, h4 { color: var(--coral-dark); font-weight: 600; }
 @media (max-width: 1024px) { .testimonials-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
 @media (max-width: 700px) { .testimonials-grid { grid-template-columns: 1fr; gap: 20px; } .testimonial-card { padding: 26px; } .testimonials-intro { margin-top: 16px; } }
 @media (prefers-reduced-motion: reduce) { .testimonial-card { transition: none; } }
+
+/* Refined Google review cards. Star values checked against the business profile. */
+.testimonials-section { background: linear-gradient(135deg, #edf2e9 0%, #faf3dd 100%); }
+.testimonials-heading-aside { max-width: 375px; }
+.testimonials-business-link { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; margin-top: 12px; color: var(--blue-dark); font-size: 13px; font-weight: 600; text-underline-offset: 5px; }
+.testimonial-card { position: relative; border-radius: 24px; padding: 30px; background: #fff; border-top: 3px solid var(--brand-sage); }
+.testimonial-card:nth-child(3n + 2) { border-top-color: var(--brand-coral); }
+.testimonial-card:nth-child(3n) { border-top-color: var(--brand-blue); }
+.testimonial-card:last-child { background: #fff; }
+.testimonial-card-top { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.testimonial-stars { color: #9b453b; font-size: 20px; letter-spacing: 3px; line-height: 1; }
+.testimonial-quote-mark { height: 34px; font-size: 54px; color: var(--brand-blue); opacity: .55; }
+.testimonial-card blockquote { margin-top: 24px; }
+.testimonial-avatar { background: var(--cream); border: 1px solid rgb(91 116 140 / 15%); width: 46px; height: 46px; flex-basis: 46px; }
+.testimonial-source-link { margin-top: 16px; padding: 0 14px; border-radius: 8px; background: var(--sage-pale); text-decoration: none; transition: background .2s; }
+.testimonial-source-link:hover { background: var(--cream); text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 700px) { .testimonial-card { padding: 26px; } .testimonials-heading-aside { margin-top: 8px; } }
+@media (prefers-reduced-motion: reduce) { .testimonial-source-link { transition: none; } }
