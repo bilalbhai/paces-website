@@ -645,6 +645,6 @@ h3, h4 { color: var(--coral-dark); font-weight: 600; }
 @media (max-width: 700px) { .testimonial-card { padding: 26px; } .testimonials-heading-aside { margin-top: 8px; } }
 @media (prefers-reduced-motion: reduce) { .testimonial-source-link { transition: none; } }
 
-/* Compact registration wording keeps the logo and navigation balanced. */
-.registration-label { display: block; width: fit-content; margin-top: 6px; padding: 3px 7px; border-radius: 5px; background: var(--sage-pale); color: var(--blue-dark); font: 600 9px/1.5 Poppins, Arial, sans-serif; white-space: nowrap; }
-@media (max-width: 700px) { .registration-label { font-size: 8px; padding: 2px 5px; margin-top: 4px; } }
+/* Original NDIS provider artwork on a white footer panel, at natural size. */
+.footer-registration { width: fit-content; padding: 14px 16px; margin: 22px 0 20px; background: #fff; border-radius: 9px; }
+.footer-registration img { display: block; width: 145px; height: 60px; object-fit: contain; }
